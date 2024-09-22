@@ -1,0 +1,70 @@
+#open-cart-button {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 16px 0 32px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #dbdbdb;
+}
+
+#open-cart-button button {
+    width: 92%;
+}
+
+#close-button {
+    position:fixed;
+    right: 24px;
+    top:4px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#close-button:hover {
+    color: #ff8000;
+    transition: 0.2s;
+}
+
+.display-block {
+    display: block !important;
+}
+
+@media (max-width: 1024px) {
+    .margin-sides {
+        margin: 0 24px;
+    }
+}
+
+@media (max-width: 800px){
+    .shopping-cart-wrapper {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        display:none;
+    }
+
+    #main-content {
+        width: 100%;
+    }
+
+    .margin-sides {
+        margin: 0;
+    }
+
+    #restaurant-info p {
+        width: 100%;
+    }
+}
+
+@media (min-width: 801px){
+    #open-cart-button {
+        display: none;
+    }
+
+    #close-button {
+        display: none;
+    }
+}

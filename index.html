@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <title>Bestell App</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+
+    <script src="./scripts/meals.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/script.js"></script>
+</head>
+
+<body onload="renderDishes()">
+    <header><img src="./assets/img/logo/Bestell App- Logo.svg" alt=""></header>
+
+
+    <div class="main-cart-container">
+        <!-- Main Content -->
+        <section id="main-content">
+            <img id="hero-picture" src="./assets/img/hero-bun-intended.jpg" alt="">
+            <div id="restaurant-logo"><img src="./assets/img/logo-bun-intended.png" alt=""></div>
+            <section id="restaurant-info" class="padding margin-sides">
+                <h2>Bun Intended</h2>
+                <div><span>4,6 von 5 ⭐</span> | <span>🚲 2,00 €</span></div>
+                <p>Willkommen bei Bun Intended, wo jeder Burger mit Liebe und Sorgfalt zubereitet wird. <br>Bestelle
+                    unsere
+                    kreativen Burger-Kreationen und genieße den Geschmack von Perfektion direkt bei dir zu Hause!</p>
+            </section>
+
+            <section id="categories" class="padding margin-sides">
+                <a href="#main-dishes">Hauptgerichte</a>
+                <a href="#">coming soon...</a>
+            </section>
+
+            <h3 id="main-dishes" class="padding margin-sides">Hauptgerichte</h3>
+
+            <!-- rendered dishes -->
+            <section id="dishes" class="padding margin-sides"></section>
+        </section>
+
+        <!-- Shopping Cart -->
+        <div id="shopping-cart-wrapper" class="shopping-cart-wrapper">
+            <section id="shopping-cart">
+                <h2>Warenkorb</h2>
+                <p onclick="toggleCartSmallScreen()" id="close-button">x</p>
+                <!-- rendered cart items -->
+                <div id="cart-items">
+                </div>
+
+                <div class="order-costs">
+                    <table>
+                        <tr>
+                            <td>Zwischensumme</td>
+                            <td class="text-right"><span id="sum-food-items">0.00</span> €</td>
+                        </tr>
+                        <tr>
+                            <td>Lieferkosten</td>
+                            <td class="text-right"><span id="delivery-costs">2.00</span> €</td>
+                        </tr>
+                        <tr class="bold">
+                            <td>Gesamt</td>
+                            <td class="text-right"><span id="sum-total">0.00</span> €</td>
+                        </tr>
+                    </table>
+
+                    <button id="order-button" onclick="sendOrder()" disabled>Bestellen</button>
+
+                </div>
+
+                <div id="order-success" class="display-none"><h2>Deine Testbestellung war erfolgreich!</h2></div>
+            </section>
+        </div>
+    </div>
+
+    <div id="open-cart-button"><button onclick="toggleCartSmallScreen()">Warenkorb</button></div>
+
+    <footer>
+        <img src="./assets/img/favicon/favicon-32x32.png" alt="">
+        <p>Übungsprojekt Bestellapp</p>
+    </footer>
+</body>
+
+</html>
